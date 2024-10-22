@@ -1,0 +1,111 @@
+body {
+    font-family: 'Times New Roman';
+    margin: 0;
+    padding: 0;
+    background-color: #f9f3f3;
+    background-image: url('cumpleaños.png'); /* Imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-position: center; /* Centra la imagen */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+}
+
+header {
+    background-color: #ffcc00; /* Amarillo alegre */
+    color: #ffffff;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 2em; /* Mayor tamaño de fuente */
+}
+
+nav {
+    margin: 20px 10px; /* Espacio reducido a los lados */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 5px 0; /* Menor margen para dispositivos móviles */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #6028e4; /* Color del enlace */
+    font-weight: bold;
+    font-size: large;
+}
+
+form {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 90%; /* Amplitud máxima del formulario ajustada */
+    margin: auto; /* Centra el formulario */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 2px solid #ffcc00; /* Borde amarillo */
+}
+
+h1 {
+    font-size: 1.8em;
+    color: #ff6600; /* Color del título */
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+input[type="submit"] {
+    background-color: #ff6600; /* Naranja brillante */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1em;
+    width: 100%; /* Botón ocupa todo el ancho */
+}
+
+input[type="submit"]:hover {
+    background-color: #ff4500; /* Color al pasar el ratón */
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    background-color: #ffcc00; /* Amarillo del pie de página */
+    color: white;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    header {
+        font-size: 1.5em; /* Tamaño de fuente reducido en móviles */
+    }
+
+    form {
+        padding: 15px; /* Menor padding en móviles */
+    }
+
+    input[type="submit"] {
+        width: 100%; /* Asegúrate de que el botón ocupe todo el ancho */
+        font-size: 1em;
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Ajusta el margen para que ocupe menos espacio */
+    }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segunda pregunta</title>
+    <link rel="stylesheet" href="styleform.css">
+    <script>
+        function verificarRespuesta(event) {
+            event.preventDefault(); // Evita el envío del formulario
+            const respuestaCorrecta = "si, siempre"; // Cambia este número por la cantidad de regalos que hiciste
+            const respuestaUsuario = document.querySelector('input[name="abuela"]:checked');
+
+            if (respuestaUsuario) {
+                if (parseInt(respuestaUsuario.value) === respuestaCorrecta) {
+                    alert("¡Correcto! Has adivinado esta pregunta tan difícil.");
+                } else {
+                    alert("Incorrecto. La respuesta correcta es " + respuestaCorrecta + ".");
+                }
+            } else {
+                alert("Por favor, selecciona una opción.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Segunda pregunta</h1>
+    </header>
+    <form onsubmit="verificarRespuesta(event)">
+        <p>Cada vez que mi abuela llama, ¿pregunta siempre por tí antes que por mí?</p>
+        <label>
+            <input type="radio" name="abuela" value="si, siempre"> si, siempre
+        </label><br>
+        <label>
+            <input type="radio" name="abuela" value="no"> no
+        <label>
+            <input type="radio" name="abuela" value="puede ser"> puede ser
+        </label><br>
+        <label>
+            <input type="radio" name="abuela" value="nunca es así"> nuna es así
+        </label><br><br>
+        
+        <input type="submit" value="Enviar">
+    </form>
+    <footer>
+        <p>El amor de tu vida</p>
+        <a href="index.html">Volver al inicio</a>
+    </footer>
+</body>
+</html>

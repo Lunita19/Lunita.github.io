@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primera pregunta</title>
+    <link rel="stylesheet" href="styleform.css">
+    <script>
+        function verificarRespuesta(event) {
+            event.preventDefault(); // Evita el envío del formulario
+            const respuestaCorrecta = 5; // Cambia este número por la cantidad de regalos que hiciste
+            const respuestaUsuario = document.querySelector('input[name="regalos"]:checked');
+
+            if (respuestaUsuario) {
+                if (parseInt(respuestaUsuario.value) === respuestaCorrecta) {
+                    alert("¡Correcto! Has adivinado el número de regalos.");
+                } else {
+                    alert("Incorrecto. La respuesta correcta es " + respuestaCorrecta + ".");
+                }
+            } else {
+                alert("Por favor, selecciona una opción.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Primera pregunta</h1>
+    </header>
+    <form onsubmit="verificarRespuesta(event)">
+        <p>¿Cuántos regalos te he hecho?</p>
+        <label>
+            <input type="radio" name="regalos" value="3"> 3
+        </label><br>
+        <label>
+            <input type="radio" name="regalos" value="5"> 5
+        </label><br>
+        <label>
+            <input type="radio" name="regalos" value="7"> 7
+        </label><br>
+        <label>
+            <input type="radio" name="regalos" value="10"> 10
+        </label><br><br>
+        
+        <input type="submit" value="Enviar">
+    </form>
+    <footer>
+        <p>El amor de tu vida</p>
+        <a href="index.html">Volver al inicio</a>
+    </footer>
+</body>
+</html>

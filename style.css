@@ -40,7 +40,13 @@ p {
 } */
 
 body {
-  background-color: #fad7df;
+  
+    background-image: url('juntos1.jpg');
+    background-color: #f0b2b4;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center -220px; /* Ajusta este valor para mover la imagen hacia arriba */
+  
 }
 
 main {

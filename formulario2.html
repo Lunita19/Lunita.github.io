@@ -8,11 +8,11 @@
     <script>
         function verificarRespuesta(event) {
             event.preventDefault(); // Evita el envío del formulario
-            const respuestaCorrecta = "si, siempre"; // Cambia este número por la cantidad de regalos que hiciste
+            const respuestaCorrecta = "siempre"; // Respuesta correcta
             const respuestaUsuario = document.querySelector('input[name="abuela"]:checked');
 
             if (respuestaUsuario) {
-                if (parseInt(respuestaUsuario.value) === respuestaCorrecta) {
+                if (respuestaUsuario.value === respuestaCorrecta) {
                     alert("¡Correcto! Has adivinado esta pregunta tan difícil.");
                 } else {
                     alert("Incorrecto. La respuesta correcta es " + respuestaCorrecta + ".");
@@ -28,17 +28,18 @@
         <h1>Segunda pregunta</h1>
     </header>
     <form onsubmit="verificarRespuesta(event)">
-        <p>Cada vez que mi abuela llama, ¿pregunta siempre por tí antes que por mí?</p>
+        <p>Cada vez que mi abuela llama, ¿pregunta siempre por ti antes que por mí?</p>
         <label>
-            <input type="radio" name="abuela" value="si, siempre"> si, siempre
+            <input type="radio" name="abuela" value="siempre"> siempre
         </label><br>
         <label>
             <input type="radio" name="abuela" value="no"> no
+        </label><br>
         <label>
             <input type="radio" name="abuela" value="puede ser"> puede ser
         </label><br>
         <label>
-            <input type="radio" name="abuela" value="nunca es así"> nuna es así
+            <input type="radio" name="abuela" value="nunca es así"> nunca es así
         </label><br><br>
         
         <input type="submit" value="Enviar">

@@ -85,7 +85,7 @@ main {
   background: white;
   width: 390px;
   height: 180px;
-
+  font-size: 13px;
   transition: all .75s;
 }
 
